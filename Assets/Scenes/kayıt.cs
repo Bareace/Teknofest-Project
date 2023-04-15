@@ -7,7 +7,9 @@ using System.IO;
 public class kayıt : MonoBehaviour
 {
 
-private string filePath;
+
+public string filePath;
+
 
     // Update is called once per frame
     void Update()
@@ -21,9 +23,24 @@ public void Start()
     
 
 }
+
+public void StartGame()
+{
+    filePath = @"C:\Users\baris\OneDrive\Masaüstü\" + login.name + ".txt";
+
+    if (!File.Exists(filePath))
+    {
+        // Dosya yoksa yeni bir dosya oluşturuluyor.
+        using (FileStream fs = File.Create(filePath))
+        {
+            fs.Close();
+        }
+    }
+}
+    
 public void SaveToTexta()
 {
-    filePath = @"C:\Users\baris\OneDrive\Masaüstü\choices.txt";
+    filePath = @"C:\Users\baris\OneDrive\Masaüstü\" + login.name + ".txt";
 
     // FileStream nesnesi oluşturuluyor.
     using (FileStream fs = new FileStream(filePath, FileMode.Append, FileAccess.Write, FileShare.ReadWrite))
@@ -41,8 +58,9 @@ public void SaveToTexta()
 }
 public void SaveToTextb()
 {
+    filePath = @"C:\Users\baris\OneDrive\Masaüstü\" + login.name + ".txt";
+
     // Seçim text dosyasına b yazılıyor.
-    filePath = @"C:\Users\baris\OneDrive\Masaüstü\choices.txt";
 
     // FileStream nesnesi oluşturuluyor.
     using (FileStream fs = new FileStream(filePath, FileMode.Append, FileAccess.Write, FileShare.ReadWrite))

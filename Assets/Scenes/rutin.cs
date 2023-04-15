@@ -12,6 +12,8 @@ public class rutin : MonoBehaviour
     public GameObject button_cont;
     public GameObject button_cont2;
     public GameObject button_cont3;
+    public GameObject button_cont4;
+
 
     
     // Drag the Image GameObject in the Unity Inspector      // Drag the new Sprite in the Unity Inspector      // Call this method to change the image     
@@ -35,6 +37,7 @@ public class rutin : MonoBehaviour
         text_bar.SetActive(false);
         button_cont.SetActive(false);
         button_cont2.SetActive(true);
+        button_cont4.SetActive(false);
 
     }
     public void ChangeImage2()    
@@ -44,6 +47,7 @@ public class rutin : MonoBehaviour
         button_cont.SetActive(false);
         button_cont2.SetActive(false);
         button_cont3.SetActive(true);
+        button_cont4.SetActive(false);
 
     }
     public void ChangeImage3()    
@@ -53,5 +57,6 @@ public class rutin : MonoBehaviour
         button_cont2.SetActive(false);
         button_cont3.SetActive(false);
         button_cont.SetActive(false);
+        button_cont4.SetActive(true);
     }
 }
