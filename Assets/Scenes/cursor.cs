@@ -1,25 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using System.IO;
-using UnityEngine.EventSystems;
 
 
-public class cursor : MonoBehaviour{
-    public Texture2D x;
-    public Texture2D y;
-    public CursorMode cursormode = CursorMode.Auto;
-    public Vector2 hotspot = Vector2.zero;
+public class cursor : MonoBehaviour
+{
+    public Texture2D cursorTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
 
-    void Start(){
-        Cursor.SetCursor(x, hotspot, cursormode);
+    // Start is called before the first frame update
+    void Start()
+    {
+
     }
-    public void OnMouseOver(){
-        Cursor.SetCursor(y, hotspot, cursormode);
+
+    public void OnMouseEnter()
+    {
+        Cursor.SetCursor(cursorTexture,hotSpot,cursorMode);
     }
-    public void OnMouseExit(){
-        Cursor.SetCursor(x, hotspot, cursormode);
+
+    public void OnMouseExit()
+    {
+        Cursor.SetCursor(null,Vector2.zero,CursorMode.Auto);
     }
 
 }

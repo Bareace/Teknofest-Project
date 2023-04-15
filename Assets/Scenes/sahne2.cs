@@ -33,4 +33,19 @@ public class sahne2 : MonoBehaviour
     public void LoadScene5(){
         SceneManager.LoadScene("kapı");
     }
+    public void LoadScene6(){
+        SceneManager.LoadScene("bölüm3");
+    }
+    public void LoadScene7(){
+        SceneManager.LoadScene("teneffüs");
+    }
+    public void LoadScene8(){
+        SceneManager.LoadScene("3.a");
+    }
+    public void LoadScene9(){
+        SceneManager.LoadScene("3.b");
+    }
+    public void LoadScene10(){
+        SceneManager.LoadScene("1");
+    }
 }
